@@ -1,12 +1,42 @@
 ﻿// easyx-double-jump.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-#include "pch.h"
-#include <iostream>
+#include "ThankPage.h"
+#include "StartGame.h"
+#include "LoadStartPage.h"
+#include "EndsPage.h"
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	// 初始化绘图窗口
+	initgraph(WIDTH, HEIGHT);
+	BeginBatchDraw();
+
+	while (1)
+	{
+		switch (g_now_working_page)
+		{
+		case 0:
+			LoadStartPage();
+			break;
+		case 1:
+			StartGame();
+			break;
+		case 2:
+			EndsPage();
+			break;
+		case 3:
+			ThankPage();
+			break;
+		default:
+			break;
+		}
+		Sleep(30);
+	}
+
+	EndBatchDraw();
+	closegraph();
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

@@ -15,16 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="easyx-double-jump.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StartGame.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThankPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadStartPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EndsPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
