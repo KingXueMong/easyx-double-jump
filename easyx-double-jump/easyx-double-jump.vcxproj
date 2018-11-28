@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\Users\kingxue\source\repos\easyx-double-jump\easyx-double-jump\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -95,6 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>easyx_ex.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -157,8 +159,12 @@
     <ClInclude Include="EndsPage.h" />
     <ClInclude Include="GlobalVar.h" />
     <ClInclude Include="LoadStartPage.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="StartGame.h" />
     <ClInclude Include="ThankPage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="easyx-double-jump.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
