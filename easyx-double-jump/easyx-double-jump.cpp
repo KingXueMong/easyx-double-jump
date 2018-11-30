@@ -32,6 +32,10 @@ int main()
 			break;
 		}
 		Sleep(30);
+		if (running)
+		{
+			break;
+		}
 	}
 
 	EndBatchDraw();

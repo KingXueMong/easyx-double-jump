@@ -9,7 +9,7 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="source">
+    <Filter Include="头文件\source">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
@@ -41,12 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="easyx-double-jump.rc">
-      <Filter>source</Filter>
+      <Filter>头文件\source</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="bitmap1.bmp">
-      <Filter>source</Filter>
-    </Image>
   </ItemGroup>
 </Project>

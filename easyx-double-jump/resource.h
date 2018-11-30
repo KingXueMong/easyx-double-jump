@@ -1,8 +1,7 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ 生成的包含文件。
-// 供 easyx-double-jump.rc 使用
+// Microsoft Visual C++ generated include file.
+// Used by easyx-double-jump.rc
 //
-#define IDB_BITMAP1                     101
 
 // Next default values for new objects
 // 

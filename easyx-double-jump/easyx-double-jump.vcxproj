@@ -73,6 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>C:\Users\kingxue\source\repos\easyx-double-jump\easyx-double-jump\Debug;$(LibraryPath)</LibraryPath>
+    <ReferencePath>C:\Users\kingxue\source\repos\easyx-double-jump\Debug;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -165,9 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="easyx-double-jump.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="bitmap1.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
