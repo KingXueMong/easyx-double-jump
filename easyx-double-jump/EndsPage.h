@@ -24,7 +24,7 @@ void EndsPage() {
 		loadimage(&img_temp, mulu1[i], 0, 0);
 		width = img_temp.getwidth();
 		height = img_temp.getheight();
-		putimage(50, 30 + 70 * i, &img_temp, SRCAND);
+		putimage(60, 50 + 70 * i, &img_temp, SRCAND);
 		FlushBatchDraw();
 		Sleep(3000);
 

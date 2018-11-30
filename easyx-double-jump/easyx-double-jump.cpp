@@ -5,6 +5,7 @@
 #include "StartGame.h"
 #include "LoadStartPage.h"
 #include "EndsPage.h"
+#include <conio.h>
 
 int main()
 {
@@ -32,6 +33,7 @@ int main()
 			break;
 		}
 		Sleep(30);
+		mciSendString(L"close jpmusic", NULL, 0, NULL);
 		if (running)
 		{
 			break;
