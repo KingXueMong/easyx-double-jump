@@ -1,5 +1,5 @@
-#pragma once
-#include <graphics.h>      // ÒıÓÃÍ¼ĞÎ¿âÍ·ÎÄ¼ş
+ï»¿#pragma once
+#include <graphics.h>      // å¼•ç”¨å›¾å½¢åº“å¤´æ–‡ä»¶
 #include <conio.h>
 #define WIDTH 400
 #define HEIGHT 600

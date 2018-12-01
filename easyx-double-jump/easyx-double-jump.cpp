@@ -1,12 +1,11 @@
 ﻿// easyx-double-jump.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
 
 #include "ThankPage.h"
 #include "StartGame.h"
 #include "LoadStartPage.h"
 #include "EndsPage.h"
 #include <conio.h>
-
+#include <stdbool.h>
 int main()
 {
 	// 初始化绘图窗口
