@@ -14,7 +14,7 @@ void EndsPage() {
 	int height;//获取长和宽
 	const TCHAR mulu1[6][90] = { L"source\\EndsPage1.png" ,L"source\\EndsPage2.png",L"source\\EndsPage3.png",L"source\\EndsPage4.png",L"source\\EndsPage5.png",L"source\\EndsPage6.png" };
 	// 读取图片至绘图窗口
-	loadimage(&img, _T("source\\endsbeijing.jpg"));
+	loadimage(&img, _T("source\\EndsPage_beijing.jpg"));
 	putimage(0, 0, &img);
 	FlushBatchDraw();
 	Sleep(1000);
