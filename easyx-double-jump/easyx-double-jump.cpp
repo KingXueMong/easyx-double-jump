@@ -32,7 +32,7 @@ int main()
 		default:
 			break;
 		}
-		Sleep(30);
+		Sleep(10);
 		mciSendString(L"close jpmusic", NULL, 0, NULL);
 		if (running)
 		{
