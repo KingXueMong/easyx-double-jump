@@ -8,6 +8,7 @@
 void StartPageUpdateWithInput();
 void StartPageUpdateWithoutInput();
 void ScandFangKuai();
+void PrintGeZI();
 
 IMAGE bkGround;
 MOUSEMSG msg;
@@ -85,6 +86,8 @@ void StartPageUpdateWithInput() {
 void StartPageUpdateWithoutInput() {
 	loadimage(&bkGround, L"");
 	putimage(0, 0, &bkGround);
+	ScandFangKuai();
+	PrintGeZI();
 	if (my_character.status&&!CheakContact(&my_character))
 	{
 		my_character.y += 1;
@@ -98,10 +101,17 @@ void StartPageUpdateWithoutInput() {
 }
 void ScandFangKuai() {
 	srand(time(NULL));
-	for (int i = 0; i < 100; )
+	for (int i = 0; i < 10; i++)
 	{
-		gezi[i].x = rand();
-		gezi[i].y = rand();
-
+		gezi[i].x = rand()%WIDTH;
+		gezi[i].y = rand()%HEIGHT;
+	}
+}
+void PrintGeZI() {
+	IMAGE img_temp;
+	loadimage(&img_temp,L"source\\use-images\\normal.png",60,17,true);
+	for (int i = 0; i < 10; i++)
+	{
+		putimage(gezi[i].x, gezi[i].y,&img_temp,SRCAND);
 	}
 }
