@@ -27,8 +27,7 @@ void LoadStartPageInit() {
 	loadimage(&GuaJian2, _T("source\\LoadStartPage\\LoadStartPage_beijing.jpg"));
 	loadimage(&GuaJian3, _T("source\\LoadStartPage\\LoadStartPage_beijing.jpg"));
 
-	loadimage(&LoadStartPageBKGround, _T("source\\LoadStartPage\\LoadStartPage_beijing.jpg"));
-	loadimage(&LoadStartPageBKGround,_T("source\\LoadStartPage\\LoadStartPage_beijing.jpg"));
+	loadimage(&LoadStartPageBKGround, _T("source\\newimg\\pausecover.png"));
 	loadimage(&LoadStartPageButton1, _T("source\\LoadStartPage\\LoadStartPagePageButton1.png"));
 	loadimage(&Name1, _T("source\\LoadStartPage\\LoadStartPagePageName1.png"));
 	loadimage(&Name2, _T("source\\LoadStartPage\\LoadStartPagePageName2.png"));

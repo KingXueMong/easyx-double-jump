@@ -17,3 +17,18 @@
 #define LOAD_START_PAGE_NAME_3_Y 550
 int g_now_working_page =0;
 int running;
+
+struct character
+{
+	int x=0;
+	int y=0;
+	int volocity = 3;
+	IMAGE character;
+	int shut=0;
+	int status=1;
+};
+struct fangkuai {
+	int x;
+	int y;
+};
+fangkuai gezi[100];

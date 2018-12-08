@@ -157,6 +157,7 @@
     <ClCompile Include="easyx-double-jump.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Character.h" />
     <ClInclude Include="EndsPage.h" />
     <ClInclude Include="GlobalVar.h" />
     <ClInclude Include="LoadStartPage.h" />
