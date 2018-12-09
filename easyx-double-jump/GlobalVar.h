@@ -15,6 +15,8 @@
 #define LOAD_START_PAGE_NAME_2_Y 500
 #define LOAD_START_PAGE_NAME_3_X 290
 #define LOAD_START_PAGE_NAME_3_Y 550
+#define GEZI_WIDTH 60
+#define GEZI_HEIGHT 17
 int g_now_working_page =0;
 int running;
 
@@ -22,13 +24,15 @@ struct character
 {
 	int x=0;
 	int y=0;
-	int volocity = 3;
+	double volocity = 3;
 	IMAGE character;
 	int shut=0;
-	int status=1;
+	int status=1;		//1为下落，0为上升
+	int alive=1;
 };
 struct fangkuai {
 	int x;
 	int y;
+	int alive=0;
 };
 fangkuai gezi[100];
