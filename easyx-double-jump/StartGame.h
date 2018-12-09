@@ -9,15 +9,16 @@ void StartPageUpdateWithInput();
 void StartPageUpdateWithoutInput();
 void ScandFangKuai();
 void PrintGeZI();
-void UpdateGezi();
+void UpdateWeizhi();
 
 IMAGE bkGround;
 character my_character;
 IMAGE diban;
+int Record[2] = {0,19}; //第一个数字记录单位滚动幅度，第二个记录上翻组数
 
 
 int CheakContact() {		//检测任务与格子是否发生碰撞
-	for (int i = 0; i < 30 && my_character.status; i++)
+	for (int i = 0; i < 80 && my_character.status; i++)
 	{
 		if (gezi[i].alive&&gezi[i].y >= 0)
 		{
@@ -98,32 +99,35 @@ void StartPageUpdateWithInput() {
 }
 
 void StartPageUpdateWithoutInput() {
-	loadimage(&bkGround, L"");
-	putimage(0, 0, &bkGround);
+
+	if (my_character.y<HEIGHT/2)
+	{
+		UpdateWeizhi();
+	}
 
 	if (!CheakContact() && my_character.status)
 	{
-		if (my_character.volocity < 5)
-			my_character.volocity += 0.2;
+		if (my_character.volocity < 6)
+			my_character.volocity += 0.3;
 		my_character.y += my_character.volocity;
 	}
 	else
 	{
 		my_character.y -= my_character.volocity;
-		my_character.volocity -= 0.2;
+		my_character.volocity -= 0.3;
 		if (my_character.volocity <= 0)
 		{
-			my_character.volocity = 5;
+			my_character.volocity = 6;
 			my_character.status = 1;
 		}
 	}
+	putimage(0, 0, &bkGround);
+	PrintGeZI();
 	putimage(my_character.x, my_character.y, &my_character.character, SRCAND);
 
-
-	PrintGeZI();
 	FlushBatchDraw();
 
-	if (my_character.y > HEIGHT - 58)
+	if (my_character.y > HEIGHT )
 	{
 		my_character.alive = false;
 	}
@@ -131,31 +135,47 @@ void StartPageUpdateWithoutInput() {
 }
 void ScandFangKuai() {
 	srand(time(NULL));
+	int temp = 0;
 	for (int i = 0; i < 20; i++)
 	{
-		for (int k = 0; k < 5; k++)
+		for (int k = 0; k < 4; k++)
 		{
-			int temp = i * 5 + k;
-			gezi[temp].x = 96 * k + rand() % 96;
-			gezi[temp].y = 64 * i + rand() % 64-HEIGHT;
-			while (i > 0 && gezi[temp].y - gezi[temp - 5].y < 17)
+			gezi[temp].x = 100 * k + rand() % 100;
+			gezi[temp].y = 60 * i + rand() % 60-HEIGHT;
+			while (i > 0 && (gezi[temp].y - gezi[temp - 4].y < 17|| abs(gezi[temp].x - gezi[temp - 1].x) < 60))
 			{
-				gezi[temp].x = 96 * k + rand() % 96;
-				gezi[temp].y = 64 * i + rand() % 64-HEIGHT;
+				gezi[temp].x = 100 * k + rand() % 100;
+				gezi[temp].y = 60 * i + rand() % 60-HEIGHT;
 			}
 			gezi[temp].alive = 1;
+			temp++;
 		}
 	}
 }
 void UpdateWeizhi() {
-	for (int i = 0; i < 30; i++)
-	{
-		if (true)
+		Record[0] += 3;
+		my_character.y += 3;
+	
+		for (int i = 0; i < 80; i++)
 		{
+			gezi[i].y += 3;
 
 		}
-	}
-
+		if (Record[0]>=60)
+		{
+			for (int i = 0; i < 4; i++)
+			{
+				int temp = Record[1]*4 + i;
+				gezi[temp].x = i*100 + rand() % 100;
+				gezi[temp].y = rand() % 60 - HEIGHT;
+				while ( i>0&&(abs(gezi[temp].x - gezi[temp - 1].x) < 60))
+				{
+					gezi[temp].x = i * 100 + rand() % 100;
+				}
+			}
+			Record[1] = (Record[1]+19)%20;
+			Record[0] = 0;
+		}
 }
 void PrintGeZI() {
 	for (int i = 0; i < 80; i++)
@@ -166,5 +186,4 @@ void PrintGeZI() {
 		}
 
 	}
-	FlushBatchDraw();
 }

@@ -35,4 +35,4 @@ struct fangkuai {
 	int y;
 	int alive=0;
 };
-fangkuai gezi[100];
+fangkuai gezi[80];
