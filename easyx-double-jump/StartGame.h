@@ -1,5 +1,5 @@
 #pragma once
-#include "GlobalVar.h"
+
 #include <string.h>
 #include <time.h>
 #include<math.h>
@@ -35,27 +35,28 @@ int CheakContact() {		//检测任务与格子是否发生碰撞
 
 void StartPageInit() {			//页面加载初始化
 	loadimage(&diban, L"source\\use-images\\normal.png", 60, 17, true);
+	IMAGE loading;
 	memset(gezi, 30, sizeof(fangkuai));
 	setbkcolor(RGB(247, 240, 233));
 	clearrectangle(0, 0, WIDTH, HEIGHT);
-	loadimage(&bkGround, L"source\\use-images\\store_bg.png");
-	for (int i = 0; i < 0; i++)				//加载界面
+	for (int i = 0; i < 1; i++)				//加载界面
 	{
-		loadimage(&bkGround, _T("source\\newimg\\loading1.png"));
-		putimage(150, 250, &bkGround);
+		loadimage(&loading, _T("source\\newimg\\loading1.png"));
+		putimage(150, 250, &loading);
 		FlushBatchDraw();
 		Sleep(1000);
 
-		loadimage(&bkGround, _T("source\\newimg\\loading2.png"));
-		putimage(150, 250, &bkGround);
+		loadimage(&loading, _T("source\\newimg\\loading2.png"));
+		putimage(150, 250, &loading);
 		FlushBatchDraw();
 		Sleep(1000);
 
-		loadimage(&bkGround, _T("source\\newimg\\loading3.png"));
-		putimage(150, 250, &bkGround);
+		loadimage(&loading, _T("source\\newimg\\loading3.png"));
+		putimage(150, 250, &loading);
 		FlushBatchDraw();
 		Sleep(1000);
 	}
+	loadimage(&bkGround, L"source\\use-images\\store_bg.png");
 
 	loadimage(&my_character.character, L"source\\newimg\\bunny\\rs.png");
 	ScandFangKuai();
@@ -68,6 +69,7 @@ void StartGame() {
 		StartPageUpdateWithInput();
 		StartPageUpdateWithoutInput();
 	}
+	running = 0;
 }
 
 void StartPageUpdateWithInput() {

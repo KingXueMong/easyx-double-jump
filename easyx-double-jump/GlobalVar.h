@@ -18,7 +18,7 @@
 #define GEZI_WIDTH 60
 #define GEZI_HEIGHT 17
 int g_now_working_page =0;
-int running;
+int running=1;
 
 struct character
 {

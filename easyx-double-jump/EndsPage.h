@@ -29,5 +29,6 @@ void EndsPage() {
 		Sleep(3000);
 
 	}
+	running = 0;
 }
 

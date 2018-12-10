@@ -79,7 +79,7 @@ void LoadStartPageUpdateWithInput() {
 			if (msg.x >= LOAD_START_PAGE_BUTTON_1_X && msg.x <= LOAD_START_PAGE_BUTTON_1_X + LOAD_START_PAGE_BUTTON_WIDTH && msg.y >= LOAD_START_PAGE_BUTTON_1_Y && msg.y <= LOAD_START_PAGE_BUTTON_1_Y + LOAD_START_PAGE_BUTTON_HEIGHT)
 				g_now_working_page = 1;
 			if (msg.x >= LOAD_START_PAGE_BUTTON_2_X && msg.x <= LOAD_START_PAGE_BUTTON_2_X + LOAD_START_PAGE_BUTTON_WIDTH && msg.y >= LOAD_START_PAGE_BUTTON_2_Y && msg.y <= LOAD_START_PAGE_BUTTON_2_Y + LOAD_START_PAGE_BUTTON_HEIGHT)
-				g_now_working_page = 3;
+				g_now_working_page = 2;
 
 		}
 	}

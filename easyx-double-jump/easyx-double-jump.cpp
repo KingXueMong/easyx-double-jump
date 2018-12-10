@@ -14,6 +14,10 @@ int main()
 
 	while (1)
 	{
+		if (!running)
+		{
+			break;
+		}
 		switch (g_now_working_page)
 		{
 		case 0:
@@ -33,10 +37,7 @@ int main()
 		}
 		Sleep(10);
 		mciSendString(L"close jpmusic", NULL, 0, NULL);
-		if (running)
-		{
-			break;
-		}
+
 	}
 
 	EndBatchDraw();
