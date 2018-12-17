@@ -19,6 +19,8 @@
 #define GEZI_HEIGHT 17
 int g_now_working_page =0;
 int running=1;
+int score =0 ;
+
 
 struct character
 {
